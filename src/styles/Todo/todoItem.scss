@@ -1,0 +1,30 @@
+
+
+.item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 103%;
+        height: 1px;
+        background-color: black;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+
+    .action {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
